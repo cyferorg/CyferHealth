@@ -6,7 +6,7 @@
 	<link rel="icon" type="image/png" href="../cyferhealthremoteicon.png"/>
     <!--[if lte IE 8]><link rel="stylesheet" href="../responsive-nav.css"><![endif]-->
     <!--[if gt IE 8]><!--><link rel="stylesheet" href="../styles.css"><!--<![endif]-->
-    <script src="../responsive-nav.js"></script>
+
 
 <style>
 #settingstable tr:nth-child(even) {
@@ -17,37 +17,42 @@
 }
 </style>
 <body>
+
 <script src="../nav.js"></script>
+
 
 <div id="settingstable">
 
 <h2>Add Client/Patient contact details</h2>
 
-<p>For every patient you wish to send messages, add their contact details by following these steps.</p>
-<p>Enter a short name that you wish to use to identify them. Then tap the + icon.</p>
-<p>Enter their Cyfer Health Client email address. This is the Google email address you will have used when setting their Cyfer Health Client app.</p>
-<p>(Optional) Enter the phone number of the device they are using to run the Cyfer Health Client app. If you don't enter a phone number, you won't be able to use some advanced commands.</p>
-<p>(Optional) Enter their PIN. If the Cyfer Health Client has a PIN set, then you must enter the same PIN in order to be able to send messages to them. (NOT CURRENTLY IMPLEMENTED.)</p>
+<p>For every patient that you wish to send messages, add their contact details by following these steps.</p>
+<p>Enter a short name (less than 10 characters) with which to identify them. Then tap the + icon.</p>
+<p>Enter their Cyfer Health Client email address. This is the Google email address you will have used when setting-up their Cyfer Health Client app.</p>
+<p>(Optional) Enter the phone number of the device running the Cyfer Health Client app. If you don't enter a phone number, you won't be able to use some of the advanced commands.</p>
+<p>(Optional) Enter their PIN. If the Cyfer Health Client has a PIN set, you must enter the same PIN here in order for your messages to be received by them. (NOT CURRENTLY IMPLEMENTED.)</p>
 <p>Tap the pencil inside a square icon to close the contact details. If you need to change the settings, tap the pencil icon again.</p>
+<p>If you ever wish to delete a patient and their contact details, tap the bin icon.</p>
 <h2>Send a Client/Patient a message</h2>
-<p>Only you have entered all the required contact details, select to whom you wish to send a message by selecting their name from the list. If you have entered only one person's contact details, this person will already be selected.</p>
-<p>To identify yourself to the patient, enter a short name with which the patient will be familiar.</p>
-<p>Enter the short message that you wish to send. The message should be short so that the patient doesn't get confused. Also, the message will be displayed on their device with a foint size that does not require scrolling. So the shorted the message, the large the font.</p>
-<p>Optionally, enter one or two replies that the patient can select as a reply to your message. If this option is used, one or two buttons will be displayed on the client's device beneath the message. Depending on the patient, they may find this step too confusing.</p>
-<p>As an example of a message using the optional replies: the message might read "I haven't heard from you for a while. Would you like me to come around?" and the replies would be given the text "Yes" and "No". Or, if you may feel that the patient may be more comfortable with: "Yes, please" and "No, I'm fine". However, the text of the replies should be short to aid in the patient reading the text of the replies that presented to them.</p>
+<p>Using the lst of patients you have created, select the patient to whom you wish to send a message. If you have entered only one person's contact details, that person will already be selected.</p>
+<p>To identify yourself to the patient when they receive the message, enter your name in a form with which the patient will be familiar. However, make it as short as possible so the font used when it is displayed to the patient is not too small.</p>
+<p>Enter the short message that you wish to send. The message should be short so that the patient doesn't get confused by a lot of text. Also, the message will be displayed on their device using a font size that ensures the message does not require scrolling, i.e. the message can be fully displayed within the height of their device's screen. The shorter the message, the larger the font used.</p>
+<p>Optionally, create one or two replies that the patient can send as a reply to your message. If this option is used, a corresponding number of buttons will be displayed on the client's device beneath your message. However, depending on the patient, they may find this step too confusing. Even if replies are not set, you will receive an email when the patient has read the message.</p>
+<p>As an example of a message using the optional replies: the message might read "I haven't heard from you for a while. Should I come around?" and the replies might be "Yes" and "No". Or, you feel that the patient would be be more comfortable with the more polite: "Yes, please" and "No, I'm fine". However, the text of the replies should be short to aid in the patient reading the text of the replies presented to them.</p>
 
 
+<a id="Settings">
 <h2>Settings</h2>
+<a>
 
-<p>The settings and commands available on the Settings page. (Accessed via the cog icon.)</p>
+<p>The settings and commands available on the Settings page, accessed via the cog icon.</p>
 <table style="width:100%">
 <tr>
 <td>Temporarily enable advanced commands</td>
-<td>Switch on to (temporarily) enable the advanced commands. After switching on, return to the main page and you will find that a drop-down list has been populated with the available commands. After restaring the app, the advanced commands will need to be enabled again.</td>
+<td>Switch on to (temporarily) enable the advanced commands. After switching on, return to the main page and you will find that a drop-down list has been populated with the available commands. After restarting the app, the advanced commands will need to be enabled again.</td>
 </tr>
 <tr>
 <td>Use external email app</td>
-<td>Turn on if you wish to use your email app to send emails. This introduces an additional step when sending commands.</td>
+<td>Turn on if you wish to use your email app to send the emails. This introduces an additional step when sending commands but is more straightforward than configuring as described below.</td>
 </tr>
 <tr>
 <td>Your email address</td>
@@ -55,22 +60,8 @@
 </tr>
 <tr>
 <td>Your app password</td>
-<td>The app password associated with the above email address. This is not the Google account password! The app password must be created within the Security settings page of your Google account. See here for me info XXXXXXXXXXX</td>
+<td>The app password associated with the above email address. This is not the Google account password! The app password is generated within the Security settings page of your Google account. See here for more info XXXXXXXXXXX</td>
 </tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-
-
 </table>
 </div>
 
@@ -78,12 +69,6 @@
 
 </pre>
 
-<table style="width:100%;background-color: lightgrey;  background-position: center; table-layout: fixed;">
-<tr>
-<th><A href="javascript:window.history.back();" style=" color: blue">Back</a></th>
-<th><a href="../furtherdiscussion/furtherdiscussion.html" style=" color: blue">Further discussion</a></th>
-</tr>
-</table>
 
     <script>
       var navigation = responsiveNav("#nav", {customToggle: ".nav-toggle"});
