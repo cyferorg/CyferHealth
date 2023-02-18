@@ -41,36 +41,88 @@
 <p>Enter the short message that you wish to send. The message should be short so that the patient doesn't get confused by a lot of text. Also, the message will be displayed on their device using a font size that ensures the message does not require scrolling, i.e. the message can be fully displayed within the height of their device's screen. The shorter the message, the larger the font used.</p>
 <p>Optionally, create one or two replies that the patient can send as a reply to your message. If this option is used, a corresponding number of buttons will be displayed on the patients's device beneath your message. However, depending on the patient, they may find this step too confusing. Even if replies are not set, you will receive an email when the patient has read the message.</p>
 <p>As an example of a message using the optional replies: the message might read "I haven't heard from you for a while. Should I come around?" and the replies might be "Yes" and "No". Or, you feel that the patient would be be more comfortable with the more polite: "Yes, please" and "No, I'm fine". However, the text of the replies should be short to aid in the patient reading the text of the replies presented to them.</p>
-
 <div id="settingstable">
 <h2>Settings</h2>
 
-<p>The settings and commands available on the Settings page, accessed via the cog icon.</p>
+<p>The settings and commands available on the Settings page.</p>
+
 <table style="width:100%">
 <tr>
-<td>Temporarily enable advanced commands</td>
-<td>Switch on to (temporarily) enable the advanced commands. After switching on, return to the main page and you will find that a drop-down list has been populated with the available commands. After restarting the app, the advanced commands will need to be enabled again.</td>
+<td>Patient's name</td>
+<td>This is the name you wish to use to identify the <i>device</i>. A good approach is to name the device after its location, e.g. bedroom or living room. It should be quite short. (Less than 10 characters).</td>
+</tr> 
+<tr>
+<td>Patient's Cyfer Health Email Address</td>
+<td>Enter the patient's Cyfer Health Client email address. This is the Google email address you will have created when setting-up their Cyfer Health Client app.</td>
 </tr>
 <tr>
-<td>Use external email app</td>
-<td>Turn on if you wish to use your email app to send the emails. This introduces an additional step when sending commands but is more straightforward than configuring as described below.</td>
+<td>Patient's Email Password</td>
+<td>Enter the patient's Cyfer Health Client email app password. This is the same password you will have created when setting-up their Cyfer Health Client app.</td>
+</tr>
+<td>Debug email</td>
+<td>Ignore this one.</td>
 </tr>
 <tr>
-<td>Your email address</td>
-<td>If you don't turn on the above option, enter the email address that you wish to use to send commands. (The address should be a Hotmail/Outlook or GMail address. If you don't want to use one of those addresses, turn on the above 'Use external email app' option.</td>
+<td>Always display on top</td>
+<td>Switching this on ensures that the Cyfer Health Alert app is always visible. If the app is running on a dedicated device then it would be best to enable this setting. If the app is on a device that is used for other things e.g. reading email, then the setting should be switched off.</td>
 </tr>
 <tr>
-<td>Your app password</td>
-<td>The app password associated with the above email address. This is not the Google account password! The app password is generated within the Security settings page of your Google account. See here for more info XXXXXXXXXXX</td>
+<td>Set max alarm volume</td>
+<td>Switch on if you want the volume of the alarm (played when the Cyfer Health Client receives a message) to be set to maximum. This can be useful if the patient has accidentally lowered or muted their device's volume settings.</td>
 </tr>
+<tr>
+<td>Turn off Do Not Disturb</td>
+<td>THIS IS MISSING</td>
+</tr>
+<tr>
+<td>Start Watchdog</td>
+<td>SHOULD THIS BE ADDED?</td>
+</tr>
+<tr>
+<tr>
+<td>Reset volume</td>
+<td>If <i>Set max alarm volume</i> is enabled, enabling <i>Reset volume</i> will restore the device's alarm volume setting to its value before the alarm was sounded.</td>
+</tr>
+<tr>
+<tr>
+<td>Always keep lock on</td>
+<td>This should only be enabled if the device Cyfer Health Alerts is running on loses network connection. This only seems to occur on a small number of older devices. To test if it is required, leave the device over night and then send a message. If the device detects the message, it is unlikely that the setting is required.</td>
+</tr>
+<tr>
+<td>Ignore lock during night</td>
+<td>This setting is only relevant if <i>Always keep lock on</i> is enabled. If <i>Always keep lock on</i> is enabled, you will probably find that the device's screen is turned on every few hours before turning off again. This can be distracting if the device is near the patient's bed and the environment is dark. In such a situation, turn on <i>Ignore lock during night</i>. When on, the device's screen will no longer light-up over-night. However, the device might not receive messages during the night. As mitigation for this issue, it is unlikely that messages would need to be sent to the patient while they are, or should be, sleeping.</td>
+</tr>
+<tr>
 
+<td>Only trusted email addresses</td>
+<td>If on, only process emails (such as messages) from email addresses that you trust. These are the email addresses specified in the above 'Emergency Email Address(es)' entry and, if you are not using Stand-alone mode, the Cyfer Health Server's email address. This reduces signifcantly the risk of the patient's devices being spammed with unwanted email. However, even without switching this on, spamming is unlikley since the Cyfer Health emails have a dedicated format and the patient's Cyfer email address is never published so shouldn't be picked up by spammers.</td>
+</tr>
+<tr>
+<td>Trusted email addresses</td>
+<td>Enter the email addresses you wish to allow to send messages and commands to the patient. Separate each email by a comma, e.g. john@mail.com,jane.jones@yahoo.com,fredsmith@hotmail.com</td>
+</tr>
+<tr>
+<tr>
+<td>Select alarm</td>
+<td>Choose the sound that should be played when a message is received. The sound should be one that is looped continuously rather than one that ends after a couple of seconds. If you want to set a particular volume for the alarm, start playing the alarm sound, then using the device's volume controls change the volume to the required colume, and then tap the <i>Set volume</i> button</td>.
+</tr>
+<tr>
+<tr>
+<td>Display orientation</td>
+<td>Once the Cyfer Health Alerts app has started the device's screen orientation won't change, i.e. between landscape and portrait orientations. This is so that the patient is not confused or irritated by the screen's layout changing as they handle the device. The required orientation can have one of the following values: Automatic, Landscape, Portrait.</td>
+</tr>
+<tr>
+<tr>
+<td>Delete all messages</td>
+<td></td>
+</tr>
+<tr>
 </table>
 </div>
 
 <pre>
 
 </pre>
-
 
     <script>
       var navigation = responsiveNav("#nav", {customToggle: ".nav-toggle"});
