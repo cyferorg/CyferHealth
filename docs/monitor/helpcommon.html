@@ -20,42 +20,15 @@
 }
 </style>
 <body>
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }      
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-};
-</script>
+<script src="../nav.js">
+
 <h1>Cyfer Health Monitor</h1>
 <h3>Cyfer Health's Document Terminology</h3>
 <p><i>Patient</i> is the person being looked after. Unless you are a professional carer you probably don't think of this person as a 'patient' but instead they are a relative or a friend to whom you are responsible for their welfare.</p>
 <p><i>Carer</i> is the person looking after the <i>patient</i>. This documentation assumes that the reader is the <i>Carer</i> so when 'you' is used, it is referring to the role of the <i>Carer</i>.</p>
 <p>There will often be more than one <i>Carer</i>, e.g. siblings looking after a parent; and within a health care organisation there is likely to be a large number of <i>Carers</i>. Likewise, within such a care organisation, there are likely to be a large number of <i>Patients</i>.</p>
 
-<p2>3</p2>
+<p>4</p>
 <div w3-include-html="android.html"></div>
 <p></p>
 <h3>Commands specific to a patient card</h3>
