@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <title>Cyfer Health Remote Settings page</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="icon" type="image/png" href="./appicon.png">
@@ -28,31 +31,40 @@
 <h2>Commands and Settings</h2>
 
 <p>Cyfer Health Monitor is predominantly an app that monitors the status of patients and hence, once it has been set up, the amount of Carer interaction with the app can be limited. The app's interface consists of a scrolling view of cards each of which provides details about a patient. As new patients are added to the system (i.e. a new patient's Cyfer Health Client app is started) the Monitor's list is updated automatically.</p>
-
+<p>A patient card consists of the patient's photo (if assigned), their short name, the current (or latest) heart reading, how long agao the reading was received and two battery indicators. The first is the battery level of of the patient's device running Cyfer Health Client (typically a phone) and the second is the battery level of the patient's health band. The icons turn red when very low. The health band's icon becomes a symbol <i class="fa fa-exclamation-circle"></i> when the connection between the patient's device and their health band is lost. This would be typically when the health band has been separated by a few metres.
+<p></p>
+<h3>Commands available at the top of the page</h3>
 <table style="width:100%">
 <tr>
-<td>Magnifying glass with minus icon</td>
+<td><i class="fa fa-search-minus"></i> </td>
 <td>Reduces the size of the patient cards, allowing more cards to be viewed without the need to scroll.</td>
 </tr> 
 <tr>
-<td>Magnifying glass with plus icon</td>
+<td><i class="fa fa-search-plus"></i></td>
 <td>Increases the size of the patient cards, providing easier viewing of each patients information however the Carere will need to scroll through the lsit to view all the patients' cards.</td>
 </tr>
-<p>Commands available from the three vertical dots menu</p>
+</table>
+<p></p>
+<h3>Commands available from the three vertical dots menu</h3>
+<table style="width:100%">
 <tr>
-<td>Alerts</td>
+<td>Alerts <i class="material-icons" style="vertical-align:middle;">alarm_add</i></td>
 <td>Configure various actions that will take place when an unusually low or high heart rate is received. See <a href="#alerts"><b>here</b></a> for more.</td>
 </tr>
-<td>Hide/show</td>
+<tr>
+<td>Alarm off <i class="fa fa-bell-slash-o"></i></td>
+<td></td>
+</tr>
+<td>Hide/show <i class="fa fa-eye"></i></td>
 <td>Toggles hiding or showing individual patients.</td>
 </tr>
 <tr>
-<td>Charts on/off</td>
+<td>Charts on/off <i class="fa fa-line-chart"></i></td>
 <td>Toggles showing the charts.</td>
 </tr>
 <tr>
-<td>Settings</td>
-<td>Configure various settings that are required for Cyfer Health Monitor to function.</td>
+<td>Settings <i class="fa fa-cog"></i></td>
+<td>Configure various settings that are required for Cyfer Health Monitor to function. See <a href="#settings"><b>here</b></a> for more.</td>
 </tr>
 <tr>
 <td>Log</td>
@@ -63,17 +75,60 @@
 <td>Just used to demo Cyfer Health. It creates artificial patients and artificial heart rate readings.</td>
 </tr>
 <tr>
-<td>Help</td>
+<td>Open folder <i class="fa fa-folder-o"></i></td>
+<td>Open the folder/directory where the readings files are saved. The folder icon turns green when a new requested file has arrived.</td>
+</tr>
+<tr>
+<td>Help <i class="material-icons" style="vertical-align:middle;">help</i></td>
 <td>This help page.</td>
 </tr>
 <tr>
-<td>About</td>
+<td>About <i class="material-icons" style="vertical-align:middle;">info</i></td>
 <td></td>
 </tr>
 <tr>
 <td>Exit</td>
 <td>Terminates Cyfer Health Monitor. The patients will no longer be monitored unless another Monitor is running.</td>
 </tr>
+</table>
+<p></p>
+<h3>Commands specific to a patient card</h3>
+<h4>Tapping the text or photo of a card</h4>
+<table style="width:100%">
+<tr>
+<td>Remove</td>
+<td>Completely removes the patient from the Monitor. However, if a new reading is received from the patient, the card will reappear.</td>
+</tr> 
+<tr>
+<td>Hide</td>
+<td>Temporarily hide the card.</td>
+</tr> 
+<tr>
+<td>Photo</td>
+<td>Assign a photo to the patient. If the Cyfer Health system has more than one Monitor, the patient's photo will be sent to all Monitors.</td>
+</tr> 
+<tr>
+<td>Readings</td>
+<td>Request files from the patient's device containing the latest readings. The csv file that will be received, contains two columns. The first is a number recognised by Excel as a date and time. For Excel to interpret the value correctly, Excel must format the column as a date and time. The second number, is the corresponding heart rate.</td>
+</tr> 
+<tr>
+<td>Log</td>
+<td>Request the debug log from the patient's device. This should only be used by the app developer.</td>
+</tr> 
+<tr>
+<td>Restart</td>
+<td>Restart the patient's Cyfer Health Client app. It takes about a minute for the app to restart. Using this command shouldn't be necessary.</td>
+</tr> 
+</table>
+<h4>Tapping the chart of a card. (The chart will change colour indicating it has been selected. After a few seconds of inactivity, it will revert to its unselected state.)</h4>
+<table style="width:100%">
+<tr>
+<td><i class="fa fa-search-plus"><i class="fa fa-search-minus"></td>
+<td>The chart will continue to zoom in or out until the magnifying glass has been released.</td>
+</tr> 
+<td>Drag the chart left or right</td>
+<td>If the chart is dragged all the way to right (i.e. so the most recent reading is displayed) a feint yellow vertical bar will be shown against the chart's y-axis. This indicates that the chart has been set to show the latest readings rather than remain stationary.</td>
+</tr> 
 </table>
 <a id="alerts"></a>
 <h2>Configuring Alerts</h2>
@@ -82,7 +137,37 @@
 <li>a notification on the device running Cyfer Health Monitor,</li>
 <li>sounding an alarm on that device or </li>
 <li>sending an email to a list of predefined email addresses .</li>
-<p>On the alerts configuration page, accessed via the three vertical dots menu, there are three sections, one for defining a warning heart rate event, a serious heart rate event and a connection lost event. Actions can be assigned as required to these three sections. It is likely you will need to run the system for a few days with each new patient to determine what values are usual for that patient, and even whether the health device is able to reliably record their heart beats. You may find that a pattient, takes off the health band, to wash for example, and then often forgets to wear it again. Or, the patient, wears the band too lose to reliably get a reading.</p>
+</ol>
+<p>On the alerts configuration page, accessed via the three vertical dots menu, there are three sections, one for defining a Warning heart rate event, a Serious heart rate event and a Connection lost event. Actions can be assigned as required to these three sections. It is likely you will need to run the system for a few days to determine what values are usual for your patients, including whether the health device is able to reliably record their heart beats. You may find that a patient takes off the health band, to wash for example, and then often forgets to put it on again. Or, a patient, wears the band too lose to reliably get a reading.</p>
+<p>An example configuration:</p>
+<ul>
+<li>In the Warning section, set low heart rate to 40 and high heart rate to 140. Action #1 is set to send an email to Carers: John, Mary, Jane.</li>
+<li>In the Serious section, set low heart rate to 35 and high heart rate to 160. Action #1 is set to send an email to Carers: John, Mary, Jane, Sue. Action #2 is to sound the alarm.</li>
+<li>In the lost Connection section, no actions set.</li>
+</ul>
+<p>Finally, you may find it unnecessary to define any actions. Just having the ability to periodically glance at the Monitor to assure yourself everything looks normal may be sufficient. To help with the at-a-glance assessment, the heart rate values of Warning and Serious alerts are also reflected within the Monitor's user interface by changing the colour of the patient cards. If a patient's heart rate is normal (i.e. outside the ranges of Warning and Serious), the card is white. If the patient's heart rate is within the Warning range, it is coloured yellow. If the heart rate is within the Serious range, it is coloured red. If the connection has been lost (i.e. no reading has been for an extended period), the card becomes grey.</p>
+<a id="settings"></a>
+<h2>Settings</h2>
+
+<table style="width:100%">
+<tr>
+<td>Your company name</td>
+<td>This is the title that appears at the top of the main Monitor page.</td>
+</tr> 
+<tr>
+<td>Your Cyfer Health email address</td>
+<td>This is the one unique GMail email address used by all the Cyfer Health Monitors. The address is used by Monitor to communicate with Cyfer Health Client and Cyfer Health Alert apps, and to email alerts and other messages to Carers. (This email address should be dedicated to this purpose and not shared with any other use.) When setting a new Cyfer Health system, generally, you should create a new Google account and then use the email address associated with that new account here.</td>
+</tr>
+<tr>
+<td>Your Cyfer Health email password</td>
+<td>The app password associated with the above Cyfer Health Monitor email address. This is not the Google account password! The app password is generated from within the Security settings page of the Google account. See here for more info XXXXXXXXXXX</td>
+</tr>
+<tr>
+<td>Your company name the the client apps</td>
+<td>This is the name that you would like to appear within the Cyfer Health Client app.</td>
+</tr>
+</table>
+
 </div>
 
 <pre>
