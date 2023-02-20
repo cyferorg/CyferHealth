@@ -4,10 +4,13 @@
 <script src="include.js"></script>
 
 <body>
-<div w3-include-html="android.html"></div>
-
+<div w3-include-html="android.html"></div> 
 <script>
-includeHTML();
+  
+var queryString = decodeURIComponent(window.location.search); //parsing 
+queryString = queryString.substring(1); 
+var queries = queryString.split("&"); 
+includeHTML(queries[0]);
 </script>
 </body>
 </html>
