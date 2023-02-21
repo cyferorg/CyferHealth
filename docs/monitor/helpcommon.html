@@ -21,14 +21,14 @@
 </style>
 <body>
 <script src="../nav.js"></script>
+<script src="include.js"></script>
 <h1>Cyfer Health Monitor</h1>
 <h3>Cyfer Health's Document Terminology</h3>
 <p><i>Patient</i> is the person being looked after. Unless you are a professional carer you probably don't think of this person as a 'patient' but instead they are a relative or a friend to whom you are responsible for their welfare.</p>
 <p><i>Carer</i> is the person looking after the <i>patient</i>. This documentation assumes that the reader is the <i>Carer</i> so when 'you' is used, it is referring to the role of the <i>Carer</i>.</p>
 <p>There will often be more than one <i>Carer</i>, e.g. siblings looking after a parent; and within a health care organisation there is likely to be a large number of <i>Carers</i>. Likewise, within such a care organisation, there are likely to be a large number of <i>Patients</i>.</p>
 
-<p>8</p>
-<div w3-include-html="dummy"></div>
+<div w3-include1-html="dummy"></div>
 <p></p>
 <h3>Commands specific to a patient card</h3>
 <h4>Tapping the text or photo of a card</h4>
@@ -117,7 +117,7 @@
 var queryString = decodeURIComponent(window.location.search); //parsing 
 queryString = queryString.substring(1); 
 var queries = queryString.split("&"); 
-includeHTML2(queries[0]);
+includeHTML3(queries[0], queries[1]);
 </script>
 </body>
 </html>
