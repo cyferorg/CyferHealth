@@ -26,32 +26,31 @@
 <p><i>Patient</i> is the person being looked after. Unless you are a professional carer you probably don't think of this person as a 'patient' but instead they are a relative or a friend to whom you are responsible for their welfare.</p>
 <p><i>Carer</i> is the person looking after the <i>patient</i>. This documentation assumes that the reader is the <i>Carer</i> so when 'you' is used, it is referring to the role of the <i>Carer</i>.</p>
 <p>There will often be more than one <i>Carer</i>, e.g. siblings looking after a parent; and within a health care organisation there is likely to be a large number of <i>Carers</i>. Likewise, within such a care organisation, there are likely to be a large number of <i>Patients</i>.</p>
-<h2>Add Patient contact details</h2>
-
-<p>For every patient you wish to send messages, add their contact details by following these steps.</p>
-<ol>
-<li>Enter a short name (less than 10 characters) with which you can identify them (e.g. Dad). Then tap the + icon.</li>
-<li>Enter their Cyfer Health Client email address. This is the Google email address you will have created when setting-up their Cyfer Health Client app.</li>
-<li>(Optional) Enter the phone number of the device running the Cyfer Health Client app. If you don't enter a phone number, you won't be able to use some of the advanced commands.</li>
-<li>(Optional) Enter their PIN. If the Cyfer Health Client has a PIN set, you must enter the same PIN here in order for your messages to be received by them. (NOT CURRENTLY IMPLEMENTED.)</li>
-<li>Tap the pencil inside a square icon to close the contact details. If you need to change the settings, tap the pencil icon again.</li>
-</ol>
-<p></p>
-<p>If you ever wish to remove a patient and their contact details from the list, tap the bin icon.</p>
-<h2>Send a Patient a message</h2>
-<p>Using the list of patients you have created, select the patient to whom you wish to send a message. If you have entered only one person's contact details, that person will already be selected.</p>
-<p>To identify yourself to the patient when they receive the message, enter your name in a form with which the patient will be familiar. However, make it as short as possible so the font used when it is displayed to the patient is not too small.</p>
-<p>Enter the short message that you wish to send. The message should be short so that the patient doesn't get confused by a lot of text. Also, the message will be displayed on their device using a font size that ensures the message does not require scrolling, i.e. the message can be fully displayed within the height of their device's screen. The shorter the message, the larger the font used.</p>
-<p>Optionally, create one or two replies that the patient can send as a reply to your message. If this option is used, a corresponding number of buttons will be displayed on the patients's device beneath your message. However, depending on the patient, they may find this step too confusing. Even if replies are not set, you will receive an email when the patient has read the message.</p>
-<p>As an example of a message using the optional replies: the message might read "I haven't heard from you for a while. Should I come around?" and the replies might be "Yes" and "No". Or, you feel that the patient would be be more comfortable with the more polite: "Yes, please" and "No, I'm fine". However, the text of the replies should be short to aid in the patient reading the text of the replies presented to them.</p>
+<h2>Message screen</h2>
+<p>This is the only screen that the patient will see and interact with. It is optional, but the Cyfer Health Alerts app is usually the only app visible on the device. Hence, the Message screen will be always visible to the patient apart from any device screen-off settings.</p>
+<p>This screen displays messages sent by carers. Each message is scaled to take up the entire display apart from a small margin at the bottom to the screen to help show there is more than one message is available. When a message arrives the screen turns-on (if off) and flashes, and optionally an alarm is sounded. (The message will also be displayed on the patient's Cyfer Health Client app.) Tapping the message on the Alert app or Client app stops the flashing and turns-off the alarm. If the Carer who sent the message has requested a response, the patient will be prompted to tap one of the response buttons. Even when the Carer has not requested a response, an email will still be sent to them to indicate that the Patient has tapped the message. Once the Patient has read the message, they can either delete it by tapping the bin icon or just leave it. In case of the latter, any new messages will be made visible and old messages scrolled off the screen.</p>
 <div id="settingstable">
 <h2>Settings</h2>
-
+<p>In order to remove clutter form the main screen, there isn't a button to access the Settings page from the main screen. (As well as removing clutter, it also reduces the likelihood of the Patient inadvertently changing the app's settings.) Instead, the app's notification should be dragged down and the Settings button, which will become visible, should be pressed.</p>
 <p>The settings and commands available on the Settings page.</p>
-
 <table style="width:100%">
+There are three buttons on the top of the Settings page:
 <tr>
-<td>Patient's name</td>
+<td>Check box</td>
+<td>Tap to check the email address and password. If the settings work, the icon will go green.</td>
+</tr> 
+<tr>
+<td>Padlock</td>
+<td>Tap to set or remove PIN access to the Settings page. Enter a value of 0000 to remove the requirement to enter a PIN.</td>
+</tr> 
+<tr>
+<td>Power off</td>
+<td>Tap to shutdown the Cyfer Health Alerts app.</td>
+</tr> 
+</table>
+<table>
+<tr>
+<td>Device name</td>
 <td>This is the name you wish to use to identify the <i>device</i>. A good approach is to name the device after its location, e.g. bedroom or living room. It should be quite short. (Less than 10 characters).</td>
 </tr> 
 <tr>
@@ -74,19 +73,9 @@
 <td>Switch on if you want the volume of the alarm (played when the Cyfer Health Client receives a message) to be set to maximum. This can be useful if the patient has accidentally lowered or muted their device's volume settings.</td>
 </tr>
 <tr>
-<td>Turn off Do Not Disturb</td>
-<td>THIS IS MISSING</td>
-</tr>
-<tr>
-<td>Start Watchdog</td>
-<td>SHOULD THIS BE ADDED?</td>
-</tr>
-<tr>
-<tr>
 <td>Reset volume</td>
 <td>If <i>Set max alarm volume</i> is enabled, enabling <i>Reset volume</i> will restore the device's alarm volume setting to its value before the alarm was sounded.</td>
 </tr>
-<tr>
 <tr>
 <td>Always keep lock on</td>
 <td>This should only be enabled if the device Cyfer Health Alerts is running on loses network connection. This only seems to occur on a small number of older devices. To test if it is required, leave the device over night and then send a message. If the device detects the message, it is unlikely that the setting is required.</td>
@@ -96,7 +85,10 @@
 <td>This setting is only relevant if <i>Always keep lock on</i> is enabled. If <i>Always keep lock on</i> is enabled, you will probably find that the device's screen is turned on every few hours before turning off again. This can be distracting if the device is near the patient's bed and the environment is dark. In such a situation, turn on <i>Ignore lock during night</i>. When on, the device's screen will no longer light-up over-night. However, the device might not receive messages during the night. As mitigation for this issue, it is unlikely that messages would need to be sent to the patient while they are, or should be, sleeping.</td>
 </tr>
 <tr>
-
+<td>Turn off Do Not Disturb</td>
+<td>(This setting might not be available) Allows Cyfer Health Alerts to turn off Android's Do Not Disturb (DND) function. DND may have been accidentally switched on by the Patient or may be turned on a timer in order, for example, not to disturb the patient overnight with unimportant notification sounds.</td>
+</tr>
+<tr>
 <td>Only trusted email addresses</td>
 <td>If on, only process emails (such as messages) from email addresses that you trust. These are the email addresses specified in the above 'Emergency Email Address(es)' entry and, if you are not using Stand-alone mode, the Cyfer Health Server's email address. This reduces signifcantly the risk of the patient's devices being spammed with unwanted email. However, even without switching this on, spamming is unlikley since the Cyfer Health emails have a dedicated format and the patient's Cyfer email address is never published so shouldn't be picked up by spammers.</td>
 </tr>
@@ -105,21 +97,25 @@
 <td>Enter the email addresses you wish to allow to send messages and commands to the patient. Separate each email by a comma, e.g. john@mail.com,jane.jones@yahoo.com,fredsmith@hotmail.com</td>
 </tr>
 <tr>
-<tr>
 <td>Select alarm</td>
 <td>Choose the sound that should be played when a message is received. The sound should be one that is looped continuously rather than one that ends after a couple of seconds. If you want to set a particular volume for the alarm, start playing the alarm sound, then using the device's volume controls change the volume to the required colume, and then tap the <i>Set volume</i> button</td>.
 </tr>
-<tr>
 <tr>
 <td>Display orientation</td>
 <td>Once the Cyfer Health Alerts app has started the device's screen orientation won't change, i.e. between landscape and portrait orientations. This is so that the patient is not confused or irritated by the screen's layout changing as they handle the device. The required orientation can have one of the following values: Automatic, Landscape, Portrait.</td>
 </tr>
 <tr>
-<tr>
-<td>Delete all messages</td>
-<td></td>
+<td>Use Emergency button</td>
+<td>Switch on in order to use a Bluetooth emergency button. Then, once the button is active, i.e. prss the button, tap the Scan button and select the device in the drop-down list underneath the Scan button. </td>.
 </tr>
 <tr>
+<td>Emergency email addresses</td>
+<td>A comma separated list of email addresses to which an email should be sent when the Patient presses their emergency button. Note that if you are using Cyfer Health Monitor, one of the addresses should be that of the Monitor.</td>
+</tr>
+<tr>
+<td>Delete all messages</td>
+<td>Delete all the received messages. If there are several messages, this message is much faster than deleting the individual messages.</td>
+</tr>
 </table>
 </div>
 
