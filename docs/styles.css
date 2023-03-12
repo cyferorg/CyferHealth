@@ -248,5 +248,5 @@ a:hover {
 
 @media screen and (min-width: 76em) {
   .nav-collapse { width: 18em }
-  .main { width: auto; left: 18em }
+  .main { width: auto; left: 0em }
 }
