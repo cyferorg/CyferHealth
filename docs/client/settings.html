@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8" />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <title>Cyfer Health Client Settings page</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -33,15 +32,16 @@
 
 <table style="width:100%">
 <tr>
-<td>Check-box button at top of page</td>
+<td style="text-align:center;"><i class="fa fa-check-square-o"></i>
+</td>
 <td>Tap to test the email settings that have been entered on this page.</td>
 </tr>
 <tr>
-<td>Padlock button at top of page</td>
+<td style="text-align:center;"><i class="fa fa-lock"></i>&nbsp;&nbsp;<i class="fa fa-unlock"></i></td>
 <td>Tap to set the PIN that controls access to this page.</td>
 </tr>
 <tr>
-<td>Power button at top of page</td>
+<td style="text-align:center;"><i style="color:red;text-align:center;" class="fa fa-power-off"></i></td>
 <td>Tap to stop Cyfer Health Client running.</td>
 </tr>
 <tr>
@@ -91,28 +91,40 @@
 <td>Switch on if you want the volume of the alarm (played when the Cyfer Health Client receives a message) to be set to maximum. This can be useful if the patient has accidentally lowered or muted their device's volume settings.</td>
 </tr>
 <tr>
+<td>Reset volume</td>
+<td></td>
+</tr>
+<tr>
 <td>Turn off Do Not Disturb</td>
 <td>As for 'Set max alarm volume', it can be useful to switch this option on to address the case where the patient has accidentally turned on Android's Do Not Disturb function.</td>
 </tr>
 <tr>
 <td>Start Watchdog</td>
-<td>Start the optional Cyfer Watchdog app and ensure that the Watchdog continues to run. (The Watchdog app ensures that the Cyfer Client Health app is operational. It is a reciprocal action, Watchdog ensures Cyfer Health Client stays operational and Cyfer Health Client ensures Watchdog stays operational.)</td>
+<td>Start the optional Cyfer Watchdog app and ensure that the Watchdog continues to run. The Watchdog app ensures that the Cyfer Client Health app is operational. (It is a reciprocal relationship: Watchdog ensures Cyfer Health Client stays operational and Cyfer Health Client ensures Watchdog stays operational.)</td>
 </tr>
 <tr>
 <td>Only trusted email addresses</td>
 <td>If on, only process emails (such as messages) from email addresses that you trust. These are the email addresses specified in the above 'Emergency Email Address(es)' entry and, if you are not using Stand-alone mode, the Cyfer Health Server's email address. This reduces significantly the risk of the patient's devices being spammed with unwanted email. However, even without switching this on, spamming is unlikley since the Cyfer Health emails have a dedicated format and the patient's Cyfer email address is never published so shouldn't be picked up by spammers.</td>
 </tr>
 <tr>
-<td>Debug email</td>
+<td>Show name</td>
+<td></td>
+</tr>
+<tr>
+<td>Show steps</td>
+<td></td>
+</tr>
+<tr>
+<td>(Advanced) Debug email</td>
 <td>Do not use this setting. It is only for the app's developer.</td>
 </tr>
 <tr>
-<td>Scan button</td>
-<td>Initiate scanning for the patient's Bluetooth health band.</td>
+<td>(Advanced) Start third-party app</td>
+<td>(Only works if using the non-lite version of Watchdog.)</td>
 </tr>
 <tr>
 <td>Patient's band</td>
-<td>Select (by tapping) the list entry that corresponds to the patient's health band. The text of the selected band will become bold. If you select the wrong entry, select again.</td>
+<td>Initiate scanning for the patient's Bluetooth health band. Then select (by tapping) the list entry that corresponds to the patient's health band. (The text of the currently selected band will be bold.) If you select the wrong entry, try again.</td>
 </tr>
 <tr>
 <td>Use emergency button</td>
