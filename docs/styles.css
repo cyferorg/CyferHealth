@@ -17,6 +17,10 @@ ol,ul,li  {
   border: default;
 }
 
+th, td {
+  padding: 15px;
+}
+
 ul.inline {
   margin: default;
   padding: default;
